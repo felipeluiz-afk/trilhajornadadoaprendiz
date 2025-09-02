@@ -1,0 +1,161 @@
+perfeito! fiz uma **ficha técnica de identidade visual** baseada no seu logo (cores extraídas diretamente da imagem). Trago os **códigos das cores**, **sugestões de fontes equivalentes**, e um **guia de site** no mesmo estilo — pronto para colar em um gerador de site/IA.
+
+---
+
+# Paleta de cores (extraída do logo)
+
+> Observação: valores são **aproximações** fiéis ao arquivo enviado.
+
+**Primária (Azul marinho – logotipo “GERAR”)**
+
+* HEX `#16226D` | RGB `22, 34, 109` | HSL `232°, 66%, 26%`
+* Uso: títulos, textos principais sobre fundo claro, cabeçalho, botões primários.
+
+**Aqua/Verde-água (figura central)**
+
+* HEX `#0DB4A7` | RGB `13, 180, 167` | HSL `175°, 87%, 38%`
+* Uso: detalhes, ícones, realces, gráficos. (Evite texto miúdo nessa cor sobre branco por contraste.)
+
+**Magenta/Rosa (figura esquerda)**
+
+* HEX `#A92F7C` | RGB `169, 47, 124` | HSL `322°, 56%, 42%`
+* Uso: destaques, selos/promos, links em destaque.
+
+**Laranja (figura direita)**
+
+* HEX `#E7A168` | RGB `231, 161, 104` | HSL `27°, 73%, 66%`
+* Uso: CTAs secundárias, ícones de apoio, gráficos.
+
+**Neutros sugeridos (para o sistema de design)**
+
+* Branco `#FFFFFF` (fundo)
+* Cinza-100 `#F6F7FB` (áreas de bloco)
+* Cinza-300 `#E2E6F0` (bordas leves)
+* Cinza-700 `#5A6A8E` (texto secundário)
+
+**Acessibilidade (contraste rápido)**
+
+* Azul `#16226D` sobre branco: **ok para corpo e títulos**.
+* Magenta `#A92F7C` sobre branco: **ok para corpo e títulos**.
+* Aqua `#0DB4A7` e Laranja `#E7A168` sobre branco: **usar para acentos**, não para texto miúdo.
+* Sugestões de tons escuros para botões com texto branco:
+
+  * Aqua escuro `#08756C` (aqua -35%)
+  * Laranja escuro `#966843` (laranja -35%)
+
+---
+
+# Tipografia (equivalentes próximos)
+
+O “GERAR” parece um **sans-serif geométrico, bold, com formas limpas**. Sugestões muito próximas:
+
+* **Primária (Títulos/Logotipo):** *Montserrat* (700–800) ou *Poppins* (700)
+  Alternativas livres: *Nunito Sans* (800), *Barlow* (700).
+* **Texto corrido:** *Inter* (400/500) ou *Nunito Sans* (400/600).
+* **Font stack CSS sugerido:**
+
+```css
+:root {
+  --font-display: "Montserrat", "Poppins", "Nunito Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-body: "Inter", "Nunito Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+```
+
+* **Estilo:** Títulos em **caixa alta** (tracking leve +2% a +4%), corpos com **altura de linha 1.6**.
+
+---
+
+# Guia de site (layout & componentes no estilo do logo)
+
+**Personalidade visual:** acolhedor, jovem e profissional. Formas arredondadas (pílulas), **cantos 16–20px**, ícones fluidos (mesma linguagem do símbolo humanoide do logo).
+
+### Layout
+
+* **Header fixo** (fundo branco, texto Azul `#16226D`, logomarca à esquerda, CTA à direita).
+* **Hero** em fundo **Cinza-100** com título grande em Azul, subtítulo curto e botão **Primário Aqua escuro `#08756C`** (texto branco).
+* **Grid 12 col.** com **gutter 24px** e **container 1120–1200px**.
+* **Cards** para cursos/indicações: fundo branco, borda `#E2E6F0`, raio 16px, sombra sutil (y=6, blur=24, opacidade 10–12%).
+  Barra/sinalizador superior fino usando **Magenta** ou **Aqua**.
+
+### Cores por função
+
+* **Primário:** Azul `#16226D` (títulos, links padrão, navegação).
+* **Acento 1:** Aqua `#0DB4A7` (chamadas, highlights, botões primários na versão escura `#08756C`).
+* **Acento 2:** Magenta `#A92F7C` (badges, CTA secundária/hover).
+* **Acento 3:** Laranja `#E7A168` (tag “novo”, passos, ícones de sucesso humano/progresso).
+
+### Botões
+
+* **Primário:** fundo **Aqua escuro `#08756C`**, texto **#FFFFFF**, raio **9999px** (pílula), peso 600.
+
+  * *Hover:* `#0A9085` | *Focus ring:* 2px Magenta `#A92F7C` com offset.
+* **Secundário:** borda 2px Azul `#16226D`, texto Azul, fundo transparente.
+
+  * *Hover:* fundo Cinza-100.
+
+### Inputs/Forms
+
+* Altura 44–48px, raio 12–16px, borda `#E2E6F0`, ícone/aura Aqua em foco (`box-shadow: 0 0 0 3px #0DB4A733`).
+
+### Ícones/Ilustração
+
+* Linha arredondada, volumes com **degradês suaves** dentro da mesma cor (ex.: Aqua → Aqua-escuro).
+* Evite preto puro; use Azul `#16226D` para traços.
+
+### Tipos de seção sugeridos
+
+1. **Hero** com headline (“GERAR oportunidades para seu futuro”).
+2. **Trilhas** (cards categorizados: Soft, Hard, Real Skills).
+3. **Destaques** (3 benefícios com ícones nas cores Aqua/Magenta/Laranja).
+4. **Depoimentos** (cards com foto circular).
+5. **CTA final** (fundo Cinza-100, botão primário).
+
+---
+
+# Tokens (CSS) prontos para IA
+
+```css
+:root {
+  /* Colors */
+  --blue-700: #16226D;
+  --aqua-500: #0DB4A7;
+  --aqua-700: #08756C;     /* botão acessível */
+  --pink-600: #A92F7C;
+  --orange-400: #E7A168;
+  --gray-100: #F6F7FB;
+  --gray-300: #E2E6F0;
+  --gray-700: #5A6A8E;
+  --white: #FFFFFF;
+
+  /* Typography */
+  --font-display: "Montserrat", "Poppins", "Nunito Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-body: "Inter", "Nunito Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --h1-size: clamp(32px, 5vw, 48px);
+  --h2-size: 32px; 
+  --body-size: 16px; 
+  --lead-size: 18px;
+  --line: 1.6;
+  --tracking-wide: 0.04em;
+
+  /* Spacing & Radius */
+  --radius-lg: 16px;
+  --radius-pill: 9999px;
+  --space-1: 8px; --space-2: 12px; --space-3: 16px; --space-4: 24px; --space-5: 32px;
+
+  /* Shadow */
+  --shadow-card: 0 6px 24px rgba(0,0,0,0.10);
+}
+```
+
+---
+
+# Especificação curta (brief) para um gerador de site/IA
+
+* **Identidade:** logo “GERAR” em Azul `#16226D`, paleta com Aqua `#0DB4A7`, Magenta `#A92F7C`, Laranja `#E7A168`, fundos brancos e cinzas claros.
+* **Tipografia:** Títulos em *Montserrat* 700/800 (CAIXA ALTA, tracking +0.04em); corpo em *Inter* 400/500, 16px, line-height 1.6.
+* **Componentes:** Botão primário pílula com fundo `#08756C` e texto branco; secundário com borda 2px `#16226D`. Cards com raio 16px, sombra suave e fitas coloridas.
+* **Acessibilidade:** Texto principal sempre em `#16226D` sobre fundo claro; evitar Aqua/Laranja para parágrafos; foco visível Magenta.
+* **Layout:** Header fixo claro; hero em Cinza-100 com CTA; seções “Trilhas”, “Destaques”, “Depoimentos”, “CTA final”.
+* **Ícones:** traços suaves, formas orgânicas, uso de blocos coloridos Aqua/Magenta/Laranja.
+
+Se quiser, eu também entrego um **arquivo .css** com esses tokens e um **HTML de exemplo** da home já no estilo “GERAR”. Quer que eu gere os arquivos?

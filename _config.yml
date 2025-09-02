@@ -1,0 +1,88 @@
+# ===== GITHUB PAGES CONFIGURATION =====
+
+# Site settings
+title: "Formações Complementares - Jovem Aprendiz GERAR"
+description: "Formações gratuitas e certificadas para complementar o programa Jovem Aprendiz da GERAR"
+url: "https://gerar-jovem-aprendiz.github.io"
+baseurl: ""
+
+# Author information
+author:
+  name: "GERAR - Programa Jovem Aprendiz"
+  email: "contato@gerar.org.br"
+
+# SEO settings
+lang: pt-BR
+locale: pt_BR
+
+# Social media
+social:
+  name: "GERAR Jovem Aprendiz"
+  links:
+    - "https://github.com/gerar-jovem-aprendiz"
+
+# GitHub Pages settings
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - .gitignore
+  - node_modules/
+  - package.json
+  - package-lock.json
+
+# Include files
+include:
+  - _pages
+
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+
+# Sass settings
+sass:
+  style: compressed
+
+# Collections (if needed in the future)
+collections:
+  cursos:
+    output: true
+    permalink: /:collection/:name/
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "cursos"
+    values:
+      layout: "curso"
+
+# Custom variables
+gerar:
+  colors:
+    primary: "#16226D"
+    secondary: "#0DB4A7"
+    accent: "#A92F7C"
+    warning: "#E7A168"
+  
+  contact:
+    email: "jovemaprendiz@gerar.org.br"
+    phone: "+55 11 0000-0000"
+  
+  analytics:
+    google_analytics: "" # Add GA tracking ID here
+    
+  social_media:
+    facebook: ""
+    instagram: ""
+    linkedin: ""
+    youtube: ""
+

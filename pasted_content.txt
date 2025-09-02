@@ -1,0 +1,190 @@
+1) Fundação Bradesco – Escola Virtual (EV)
+
+Plataforma brasileira supercompleta, gratuita com certificado (emite após prova ≥70%).
+
+Microsoft Excel 2016 – Básico — fundamentos, formatação, funções. Gratuito, com certificado.
+https://www.ev.org.br/cursos/microsoft-excel-2016-basico
+ 
+EV Brasil
+
+Excel na Prática — rotinas do dia a dia, análises e automação básica. Gratuito, com certificado.
+https://www.ev.org.br/cursos/excel-na-pratica
+ 
+EV Brasil
+
+Comunicação Escrita — escrever com clareza e objetividade (pontuação, crase, ortografia). Gratuito, com certificado.
+https://www.ev.org.br/cursos/comunicacao-escrita
+ 
+EV Brasil
+
+(Política de gratuidade e certificados)
+https://www.ev.org.br/FAQ
+ | https://www.ev.org.br/validar-certificado
+ 
+EV Brasil
++1
+
+2) Escola Virtual do Governo – EV.G (ENAP)
+
+Cursos abertos ao público, gratuitos com certificado.
+
+Introdução ao Excel (25h) — visão geral, planilhas e apresentação de dados. Gratuito, com certificado.
+https://www.escolavirtual.gov.br/curso/459
+ 
+Escola Virtual
+
+Aplicação do Power BI no Serviço Público (20h) — conceitos e uso prático do Power BI. Gratuito, com certificado.
+https://www.escolavirtual.gov.br/curso/1376
+ 
+Escola Virtual
+
+Redação Oficial e Noções de SEI (10h) — escrita formal e normas. Gratuito, com certificado.
+https://www.escolavirtual.gov.br/p/governoba?carga_horaria=&query=sei
+ (catálogo) 
+Escola Virtual
+
+Comunicação Assertiva (50h) e Comunicação Não Violenta (20h). Gratuitos, com certificado.
+https://www.escolavirtual.gov.br/curso/1347
+ | https://www.escolavirtual.gov.br/curso/463
+ 
+Escola Virtual
++1
+
+3) Microsoft (Learn + Suporte)
+
+Conteúdos oficiais para Excel/Power BI. Gratuitos (normalmente sem certificado, mas com badges no Learn).
+
+Comece a criar com o Power BI — passo a passo para criar relatórios interativos. Gratuito.
+https://learn.microsoft.com/pt-br/training/modules/get-started-with-power-bi/
+ 
+Microsoft Learn
+
+Ajuda & Aprendizado do Excel — vídeos/guia sob demanda (tarefas básicas, fórmulas, gráficos). Gratuito.
+https://support.microsoft.com/pt-br/excel
+ | “Tarefas básicas no Excel” 
+Suporte Microsoft
++1
+
+4) Google (Skillshop / Ateliê Digital + Workspace)
+
+Treinamentos gratuitos; no Skillshop há prêmio/certificado de conclusão.
+
+Fundamentals of Digital Marketing (40h) — certificado do Google Skillshop ao concluir. Gratuito, com certificado (Skillshop).
+https://skillshop.exceedlms.com/student/collection/730709-digital-marketing
+ 
+Skillshop
+
+Google Workspace — Gmail (Escrever e-mails) — guia oficial para criar e-mails profissionais. Gratuito, sem certificado.
+https://support.google.com/a/users/answer/9259846?hl=pt-BR
+ 
+Suporte Google
+
+Treinamento do Google Workspace (produtividade) — visão geral de Gmail, Drive, Docs, Meet. Gratuito, sem certificado.
+https://workspace.google.com/intl/pt-BR/training/
+ 
+Google Workspace
+
+5) SEBRAE (Portal de Cursos Online)
+
+Cursos gratuitos com certificado digital (emissão on-line).
+
+Portal de Cursos On-line — catálogo geral. Gratuito, com certificado.
+https://sebrae.com.br/sites/PortalSebrae/cursosonline
+ 
+Sebrae
+
+Sua empresa nas redes sociais — inclui nota sobre certificado digital 100% gratuito.
+https://sebrae.com.br/sites/PortalSebrae/cursosonline/sua-empresa-nas-redes-sociais%2C2fb0b8a6a28bb610VgnVCM1000004c00210aRCRD
+ 
+Sebrae
+
+Atendimento ao Cliente — atendimento e relacionamento. Gratuito, com certificado.
+https://sebrae.com.br/sites/PortalSebrae/cursosonline/atendimento-ao-cliente%2Cfe80b8a6a28bb610VgnVCM1000004c00210aRCRD
+ 
+Sebrae
+
+6) Escola do Trabalhador 4.0 (MTE + Microsoft)
+
+Programa público com cursos gratuitos, acesso ao Office 365 durante o curso e certificação MTE/Microsoft (após prova).
+
+Portal do Programa — visão geral, gratuidade e certificação.
+https://www.gov.br/trabalho-e-emprego/pt-br/servicos/mte/programa-escola-do-trabalhador-4.0
+ 
+Serviços e Informações do Brasil
+
+Cadastro/Entrada — para acessar as trilhas.
+https://cadastro.escoladotrabalhador40.com.br/
+ 
+cadastro.escoladotrabalhador40.com.br
+
+Notícia oficial (2025) — 167 cursos, trilhas atualizadas e certificação.
+https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2025/fevereiro/escola-do-trabalhador-4-0-disponibiliza-novos-cursos-de-inteligencia-artificial-e-certificacao-microsoft
+ 
+Serviços e Informações do Brasil
+
+7) Instituto PROA
+
+Formações para jovens (especialmente rede pública), gratuitas; trilhas de comportamental + técnico (Excel, comunicação, empregabilidade).
+
+PROPROFISSÃO / Trilhas PROA — “100% gratuita”, inscrições por turmas regionais.
+https://www.proa.org.br/proprofissao
+ | https://www.proa.org.br/trilhas-proa
+ 
+Serviços e Informações do Brasil
+
+8) UNICEF – 1 Milhão de Oportunidades (1MiO)
+
+Plataforma de oportunidades e capacitações gratuitas para jovens (empregabilidade, soft skills, mundo digital).
+
+Portal 1MiO — cursos e trilhas de habilidades para o trabalho. Gratuito.
+https://www.1mio.com.br/
+ | https://1mio.org.br/
+ 
+PROA
+
+9) Sesc Digital (SP)
+
+Plataforma gratuita com cursos livres (cidadania digital, cultura, bem-estar); úteis para postura, comunicação e vida.
+
+EAD Sesc Digital — catálogo de cursos. Gratuito.
+https://ead.sescdigital.org.br/courses
+ 
+Suporte Microsoft
+
+10) Na Prática – Fundação Estudar
+
+Cursos gratuitos, focados em comunicação, entrevistas, decisão de carreira; geralmente com certificado.
+
+Comunicação Assertiva no Trabalho — curso gratuito, com certificado.
+https://lp.napratica.org.br/comunicacao-assertiva-no-trabalho
+ | matéria recente sobre os cursos gratuitos: https://exame.com/carreira/na-pratica-lanca-plataforma-gratuita-de-cursos-online-para-impulsionar-carreiras-saiba-mais/
+ 
+lp.napratica.org.br
+Exame
+
+Trilhas prontas para você colocar no site
+Trilha “Primeiro Emprego” (4–6 semanas)
+
+Comunicação Escrita (EV) → Redação Oficial (EV.G) → Gmail: escrever e-mails (Google Workspace) → Atendimento ao Cliente (SEBRAE) → Comunicação Não Violenta (EV.G). 
+EV Brasil
+Escola Virtual
++1
+Suporte Google
+Sebrae
+
+Trilha “Office + Dados” (6–8 semanas)
+
+Excel Básico (EV) → Tarefas básicas no Excel (Microsoft) → Introdução ao Power BI (Microsoft Learn) → Aplicação do Power BI (EV.G) → Storytelling com Dados (EV.G). 
+EV Brasil
+Suporte Microsoft
+Microsoft Learn
+Escola Virtual
++1
+
+Trilha “Vida & Carreira”
+
+Comunicação Assertiva (Na Prática) → Propósito e Qualidade de Vida (EV.G) → 1MiO (trilhas de empregabilidade) → Fundamentos de Marketing Digital (Google Skillshop). 
+lp.napratica.org.br
+Escola Virtual
+PROA
+Skillshop
