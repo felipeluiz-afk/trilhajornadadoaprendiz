@@ -4,36 +4,704 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Formações complementares gratuitas para jovens do programa Jovem Aprendiz da GERAR. Cursos de comunicação, Excel, Power BI e desenvolvimento profissional.">
-    <meta name="keywords" content="jovem aprendiz, formação, cursos gratuitos, GERAR, comunicação, Excel, Power BI, carreira">
-    <meta name="author" content="GERAR - Programa Jovem Aprendiz">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://gerar-jovem-aprendiz.github.io/">
-    <meta property="og:title" content="Formações Complementares - Jovem Aprendiz GERAR">
-    <meta property="og:description" content="Amplie seus conhecimentos para o mundo do trabalho com formações gratuitas e certificadas.">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://gerar-jovem-aprendiz.github.io/">
-    <meta property="twitter:title" content="Formações Complementares - Jovem Aprendiz GERAR">
-    <meta property="twitter:description" content="Amplie seus conhecimentos para o mundo do trabalho com formações gratuitas e certificadas.">
-    
     <title>Formações Complementares - Jovem Aprendiz GERAR</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-    
-    <!-- Analytics (placeholder) -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script> -->
+    <style>
+        /* ===== RESET & VARIABLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Colors GERAR */
+            --blue-700: #16226D;
+            --aqua-500: #0DB4A7;
+            --aqua-700: #08756C;
+            --aqua-900: #0A9085;
+            --pink-600: #A92F7C;
+            --orange-400: #E7A168;
+            --gray-50: #FAFBFC;
+            --gray-100: #F6F7FB;
+            --gray-200: #F1F3F7;
+            --gray-300: #E2E6F0;
+            --gray-600: #6B7280;
+            --gray-700: #5A6A8E;
+            --gray-800: #374151;
+            --white: #FFFFFF;
+            
+            /* Typography */
+            --font-display: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+            --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--gray-800);
+            background-color: var(--white);
+        }
+
+        /* ===== LAYOUT ===== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            background: var(--white);
+            border-bottom: 3px solid var(--gray-200);
+            padding: 24px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .logo-section {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .logo-text {
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 32px;
+            color: var(--blue-700);
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .logo-subtitle {
+            font-size: 14px;
+            color: var(--gray-600);
+            font-weight: 500;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            color: var(--gray-700);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background: var(--aqua-500);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 0%, rgba(13, 180, 167, 0.1) 100%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 48px;
+        }
+
+        .hero-title {
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: clamp(36px, 5vw, 56px);
+            color: var(--blue-700);
+            margin-bottom: 24px;
+            line-height: 1.1;
+        }
+
+        .hero-description {
+            font-size: 20px;
+            color: var(--gray-600);
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 48px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 50px;
+            font-family: var(--font-body);
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: var(--aqua-700);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--aqua-900);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(8, 117, 108, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--blue-700);
+            border: 2px solid var(--blue-700);
+        }
+
+        .btn-secondary:hover {
+            background: var(--blue-700);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 32px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 24px;
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            display: block;
+            font-family: var(--font-display);
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--aqua-700);
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--gray-600);
+            font-weight: 500;
+        }
+
+        /* ===== SECTION HEADERS ===== */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--blue-700);
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 20px;
+            color: var(--gray-600);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ===== TRILHAS SECTION ===== */
+        .trilhas-section {
+            background: var(--white);
+        }
+
+        .trilhas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 32px;
+        }
+
+        .trilha-card {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 32px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+            border-top: 6px solid var(--aqua-500);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .trilha-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--aqua-500) 0%, var(--pink-600) 50%, var(--orange-400) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .trilha-card:hover::before {
+            opacity: 1;
+        }
+
+        .trilha-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(0,0,0,0.2);
+        }
+
+        .trilha-card[data-trilha="primeiro-emprego"] {
+            border-top-color: var(--aqua-500);
+        }
+
+        .trilha-card[data-trilha="office-dados"] {
+            border-top-color: var(--pink-600);
+        }
+
+        .trilha-card[data-trilha="vida-carreira"] {
+            border-top-color: var(--orange-400);
+        }
+
+        .trilha-header {
+            margin-bottom: 24px;
+        }
+
+        .trilha-icon {
+            font-size: 64px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .trilha-title {
+            font-family: var(--font-display);
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--blue-700);
+            margin-bottom: 12px;
+        }
+
+        .trilha-meta {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        .trilha-duration,
+        .trilha-focus {
+            font-size: 14px;
+            color: var(--gray-600);
+            font-weight: 600;
+            padding: 6px 12px;
+            background: var(--gray-100);
+            border-radius: 20px;
+            border: 1px solid var(--gray-200);
+        }
+
+        .trilha-description {
+            color: var(--gray-700);
+            margin-bottom: 24px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .curso-list {
+            list-style: none;
+        }
+
+        .curso-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+            padding: 20px;
+            background: var(--gray-50);
+            border-radius: 12px;
+            border-left: 4px solid var(--aqua-500);
+            transition: all 0.3s ease;
+        }
+
+        .curso-item:hover {
+            background: var(--gray-100);
+            transform: translateX(8px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        .curso-info {
+            flex: 1;
+        }
+
+        .curso-name {
+            display: block;
+            color: var(--blue-700);
+            font-weight: 600;
+            margin-bottom: 4px;
+            font-size: 16px;
+        }
+
+        .curso-provider {
+            color: var(--gray-600);
+            font-size: 14px;
+        }
+
+        .curso-link {
+            color: var(--white);
+            background: var(--aqua-700);
+            font-weight: 600;
+            font-size: 14px;
+            padding: 10px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .curso-link:hover {
+            background: var(--pink-600);
+            transform: translateX(4px);
+            box-shadow: 0 4px 12px rgba(169, 47, 124, 0.3);
+        }
+
+        /* ===== PLATAFORMAS SECTION ===== */
+        .plataformas-section {
+            background: var(--gray-50);
+        }
+
+        .plataformas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .plataforma-card {
+            background: var(--white);
+            border: 2px solid var(--gray-200);
+            border-radius: 20px;
+            padding: 32px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .plataforma-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--aqua-500), var(--pink-600));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .plataforma-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .plataforma-card:hover {
+            border-color: var(--aqua-500);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+        }
+
+        .plataforma-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .plataforma-name {
+            font-family: var(--font-display);
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--blue-700);
+            margin-bottom: 12px;
+        }
+
+        .plataforma-description {
+            color: var(--gray-600);
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+
+        .plataforma-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            background: var(--aqua-100);
+            color: var(--aqua-700);
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            background: linear-gradient(135deg, var(--aqua-500), var(--aqua-700));
+            color: var(--white);
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            background: linear-gradient(135deg, var(--blue-700) 0%, var(--aqua-700) 100%);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-family: var(--font-display);
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 24px;
+        }
+
+        .cta-description {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+
+        .cta-actions {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-section .btn-primary {
+            background: var(--white);
+            color: var(--blue-700);
+        }
+
+        .cta-section .btn-primary:hover {
+            background: var(--gray-100);
+            color: var(--blue-700);
+        }
+
+        .cta-section .btn-secondary {
+            border-color: var(--white);
+            color: var(--white);
+        }
+
+        .cta-section .btn-secondary:hover {
+            background: var(--white);
+            color: var(--blue-700);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--gray-800);
+            color: var(--gray-300);
+            padding: 64px 0 32px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand .logo-text {
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .footer-description {
+            color: var(--gray-400);
+            line-height: 1.6;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        .footer-section h4 {
+            color: var(--white);
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 8px;
+        }
+
+        .footer-section a {
+            color: var(--gray-400);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--aqua-500);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--gray-700);
+            padding-top: 32px;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            color: var(--gray-500);
+            font-size: 14px;
+            margin: 0;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .nav-menu {
+                gap: 16px;
+            }
+            
+            .hero {
+                padding: 60px 0;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+            
+            .trilhas-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            
+            .trilha-card {
+                padding: 24px;
+            }
+            
+            .curso-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+            
+            .curso-link {
+                align-self: flex-start;
+            }
+            
+            .plataformas-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            
+            .footer-links {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+
+        /* ===== ACCESSIBILITY ===== */
+        .btn:focus,
+        .nav-link:focus,
+        .curso-link:focus {
+            outline: 3px solid var(--pink-600);
+            outline-offset: 2px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            html {
+                scroll-behavior: auto;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -53,348 +721,294 @@
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section class="hero" id="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1 class="hero-title">Amplie seus conhecimentos para o mundo do trabalho</h1>
-                    <p class="hero-description">
-                        Estas formações gratuitas complementam seu programa Jovem Aprendiz, oferecendo conhecimentos essenciais que vão te preparar melhor para o mercado de trabalho. Escolha uma trilha e comece sua jornada de aprendizado!
-                    </p>
-                    <div class="hero-actions">
-                        <a href="#trilhas" class="btn btn-primary">Explorar Trilhas</a>
-                        <a href="#sobre" class="btn btn-secondary">Saiba Mais</a>
-                    </div>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">15+</span>
-                        <span class="stat-label">Cursos Disponíveis</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">9</span>
-                        <span class="stat-label">Plataformas Parceiras</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">Gratuito</span>
-                    </div>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Amplie seus conhecimentos para o mundo do trabalho</h1>
+                <p class="hero-description">
+                    Estas formações gratuitas complementam seu programa Jovem Aprendiz, oferecendo conhecimentos essenciais que vão te preparar melhor para o mercado de trabalho. Escolha uma trilha e comece sua jornada de aprendizado!
+                </p>
+                <div class="hero-actions">
+                    <a href="#trilhas" class="btn btn-primary">Explorar Trilhas</a>
+                    <a href="#sobre" class="btn btn-secondary">Saiba Mais</a>
                 </div>
             </div>
-        </section>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Cursos Disponíveis</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">9</span>
+                    <span class="stat-label">Plataformas Parceiras</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Gratuito</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- Trilhas Section -->
-        <section class="trilhas-section" id="trilhas">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Trilhas de Formação</h2>
-                    <p class="section-subtitle">Escolha a trilha que mais combina com seus objetivos profissionais</p>
+    <!-- Trilhas Section -->
+    <section class="section trilhas-section" id="trilhas">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Trilhas de Formação</h2>
+                <p class="section-subtitle">Escolha a trilha que mais combina com seus objetivos profissionais</p>
+            </div>
+            
+            <div class="trilhas-grid">
+                <!-- Trilha 1: Primeiro Emprego -->
+                <div class="trilha-card" data-trilha="primeiro-emprego">
+                    <div class="trilha-header">
+                        <div class="trilha-icon">🗣️</div>
+                        <h3 class="trilha-title">Primeiro Emprego</h3>
+                        <div class="trilha-meta">
+                            <span class="trilha-duration">4-6 semanas</span>
+                            <span class="trilha-focus">Comunicação e Atendimento</span>
+                        </div>
+                    </div>
+                    <p class="trilha-description">
+                        Desenvolva habilidades essenciais de comunicação para se destacar no seu primeiro emprego.
+                    </p>
+                    <ul class="curso-list">
+                        <li class="curso-item">
+                            <div class="curso-info">
+                                <strong class="curso-name">Comunicação Escrita</strong>
+                                <small class="curso-provider">Fundação Bradesco - Escola Virtual</small>
+                            </div>
+                            <a href="https://www.ev.org.br/cursos/comunicacao-escrita" class="curso-link" target="_blank" rel="noopener">
+                                Acessar curso →
+                            </a>
+                        </li>
+                        <li class="curso-item">
+                            <div class="curso-info">
+                                <strong class="curso-name">Redação Oficial</strong>
+                                <small class="curso-provider">Escola Virtual do Governo (ENAP)</small>
+                            </div>
+                            <a href="https://www.escolavirtual.gov.br/p/governoba?carga_horaria=&query=sei" class="curso-link" target="_blank" rel="noopener">
+                                Acessar curso →
+                            </a>
+                        </li>
+                        <li class="curso-item">
+                            <div class="curso-info">
+                                <strong class="curso-name">Gmail: Escrever E-mails</strong>
+                                <small class="curso-provider">Google Workspace</small>
+                            </div>
+                            <a href="https://support.google.com/a/users/answer/9259846?hl=pt-BR" class="curso-link" target="_blank" rel="noopener">
+                                Acessar curso →
+                            </a>
+                        </li>
+                        <li class="curso-item">
+                            <div class="curso-info">
+                                <strong class="curso-name">Atendimento ao Cliente</strong>
+                                <small class="curso-provider">SEBRAE</small>
+                            </div>
+                            <a href="https://sebrae.com.br/sites/PortalSebrae/cursosonline/atendimento-ao-cliente%2Cfe80b8a6a28bb610VgnVCM1000004c00210aRCRD" class="curso-link" target="_blank" rel="noopener">
+                                Acessar curso →
+                            </a>
+                        </li>
+                        <li class="curso-item">
+                            <div class="curso-info">
+                                <strong class="curso-name">Comunicação Não Violenta</strong>
+                                <small class="curso-provider">Escola Virtual do Governo</small>
+                            </div>
+                            <a href="https://www.escolavirtual.gov.br/curso/463" class="curso-link" target="_blank" rel="noopener">
+                                Acessar curso →
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Trilha 2: Office + Dados -->
+                <div class="trilha-card" data-trilha="office-dados">
+                    <div class="trilha-header">
+                        <div class="trilha-icon">💻</div>
+                        <h3 class="trilha-title">Office + Dados</h3>
+                        <div class="trilha-meta">
+                            <span class="trilha-duration">6-8 semanas</span>
+                            <span class="trilha-focus">Ferramentas Digitais e Análise</span>
+                        </div>
+                    </div>
+                    <p class="trilha-description">
+                        Domine as principais ferramentas do Office e aprenda a trabalhar com dados.
+                    </p>
+                    <ul class="curso-list">
+                        <li class="curso-item">
+                            <div class="curso-info">
+                                <strong class="curso-name">Excel Básico</strong>
+                                <small class="curso-provider">Fundação Bradesco - Escola Virtual</small>
+                            </div>
+                            <a href="https://www.ev.org.br/cursos/microsoft-excel-2016-basico" class="curso-link" target="_blank" rel="noopener">
+                                Acessar curso →
+                            </a>
+                        </li>
+                        <li class="curso-item">
+                            <div class="curso-info">
+                                <strong class="curso-name">Excel na Prática</strong>
+                                <small class="curso-provider">Fundação Bradesco - Escola Virtual</small>
+                            </div>
+                            <a href="https://www.ev.org.br/cursos/excel-na-pratica" class="curso-link" target="_blank" rel="noopener">
+                                Acessar curso →
+                            </a>
+                        </li>
+                        <li class="curso-item">
+                            <div class="curso-info">
+                                <strong class="curso-name">Tarefas Básicas no Excel</strong>
+                                <small class="curso-provider">Microsoft Support</small>
+                            </div>
+                            <a href="https://support.microsoft.com/pt-br/excel" class="curso-link" target="_blank" rel="noopener">
+                                Acessar curso →
+                            </a>
+                        </li>
+                        <li class="curso-item">
+                            <div class="curso-info">
+                                <strong class="curso-name">Introdução ao Power BI</strong>
+                                <small class="curso-provider">Microsoft Learn</small>
+                            </div>
+                            <a href="https://learn.microsoft.com/pt-br/training/modules/get-started-with-power-bi/" class="curso-link" target="_blank" rel="noopener">
+                                Acessar curso →
+                            </a>
+                        </li>
+                        <li class="curso-item">
+                            <div class="curso-info">
+                                <strong class="curso-name">Power BI no Serviço Público</strong>
+                                <small class="curso-provider">Escola Virtual do Governo</small>
+                            </div>
+                            <a href="https://www.escolavirtual.gov.br/curso/1376" class="curso-link" target="_blank" rel="noopener">
+                                Acessar curso →
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Trilha 3: Vida & Carreira -->
+                <div class="trilha-card" data-trilha="vida-carreira">
+                    <div class="trilha-header">
+                        <div class="trilha-icon">🚀</div>
+                        <h3 class="trilha-title">Vida & Carreira</h3>
+                        <div class="trilha-meta">
+                            <span class="trilha-duration">Flexível</span>
+                            <span class="trilha-focus">Desenvolvimento Pessoal e Profissional</span>
+                        </div>
+                    </div>
+                    <p class="trilha-description">
+                        Desenvolva habilidades comportamentais e estratégias para construir sua carreira.
+                    </p>
+                    <ul class="curso-list">
+                        <li class="curso-item">
+                            <div class="curso-info">
+                                <strong class="curso-name">Comunicação Assertiva no Trabalho</strong>
+                                <small class="curso-provider">Na Prática - Fundação Estudar</small>
+                            </div>
+                            <a href="https://lp.napratica.org.br/comunicacao-assertiva-no-trabalho" class="curso-link" target="_blank" rel="noopener">
+                                Acessar curso →
+                            </a>
+                        </li>
+                        <li class="curso-item">
+                            <div class="curso-info">
+                                <strong class="curso-name">Fundamentos de Marketing Digital</strong>
+                                <small class="curso-provider">Google Skillshop</small>
+                            </div>
+                            <a href="https://skillshop.exceedlms.com/student/collection/730709-digital-marketing" class="curso-link" target="_blank" rel="noopener">
+                                Acessar curso →
+                            </a>
+                        </li>
+                        <li class="curso-item">
+                            <div class="curso-info">
+                                <strong class="curso-name">1MiO - Trilhas de Empregabilidade</strong>
+                                <small class="curso-provider">UNICEF</small>
+                            </div>
+                            <a href="https://www.1mio.com.br/" class="curso-link" target="_blank" rel="noopener">
+                                Acessar plataforma →
+                            </a>
+                        </li>
+                        <li class="curso-item">
+                            <div class="curso-info">
+                                <strong class="curso-name">PROPROFISSÃO</strong>
+                                <small class="curso-provider">Instituto PROA</small>
+                            </div>
+                            <a href="https://www.proa.org.br/proprofissao" class="curso-link" target="_blank" rel="noopener">
+                                Acessar programa →
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plataformas Section -->
+    <section class="section plataformas-section" id="plataformas">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Principais Plataformas</h2>
+                <p class="section-subtitle">Conheça as instituições parceiras que oferecem os cursos gratuitos</p>
+            </div>
+            
+            <div class="plataformas-grid">
+                <div class="plataforma-card">
+                    <div class="plataforma-icon">🎓</div>
+                    <h4 class="plataforma-name">Fundação Bradesco</h4>
+                    <p class="plataforma-description">Escola Virtual com cursos gratuitos e certificados em diversas áreas.</p>
+                    <div class="plataforma-badge">Certificado Gratuito</div>
                 </div>
                 
-                <div class="trilhas-grid">
-                    <!-- Trilha 1: Primeiro Emprego -->
-                    <div class="trilha-card" data-trilha="primeiro-emprego">
-                        <div class="trilha-header">
-                            <div class="trilha-icon">🗣️</div>
-                            <h3 class="trilha-title">Primeiro Emprego</h3>
-                            <div class="trilha-meta">
-                                <span class="trilha-duration">4-6 semanas</span>
-                                <span class="trilha-focus">Comunicação e Atendimento</span>
-                            </div>
-                        </div>
-                        <p class="trilha-description">
-                            Desenvolva habilidades essenciais de comunicação para se destacar no seu primeiro emprego.
-                        </p>
-                        <ul class="curso-list">
-                            <li class="curso-item">
-                                <div class="curso-info">
-                                    <strong class="curso-name">Comunicação Escrita</strong>
-                                    <small class="curso-provider">Fundação Bradesco - Escola Virtual</small>
-                                </div>
-                                <a href="https://www.ev.org.br/cursos/comunicacao-escrita" class="curso-link" target="_blank" rel="noopener">
-                                    Acessar curso →
-                                </a>
-                            </li>
-                            <li class="curso-item">
-                                <div class="curso-info">
-                                    <strong class="curso-name">Redação Oficial</strong>
-                                    <small class="curso-provider">Escola Virtual do Governo (ENAP)</small>
-                                </div>
-                                <a href="https://www.escolavirtual.gov.br/p/governoba?carga_horaria=&query=sei" class="curso-link" target="_blank" rel="noopener">
-                                    Acessar curso →
-                                </a>
-                            </li>
-                            <li class="curso-item">
-                                <div class="curso-info">
-                                    <strong class="curso-name">Gmail: Escrever E-mails</strong>
-                                    <small class="curso-provider">Google Workspace</small>
-                                </div>
-                                <a href="https://support.google.com/a/users/answer/9259846?hl=pt-BR" class="curso-link" target="_blank" rel="noopener">
-                                    Acessar curso →
-                                </a>
-                            </li>
-                            <li class="curso-item">
-                                <div class="curso-info">
-                                    <strong class="curso-name">Atendimento ao Cliente</strong>
-                                    <small class="curso-provider">SEBRAE</small>
-                                </div>
-                                <a href="https://sebrae.com.br/sites/PortalSebrae/cursosonline/atendimento-ao-cliente%2Cfe80b8a6a28bb610VgnVCM1000004c00210aRCRD" class="curso-link" target="_blank" rel="noopener">
-                                    Acessar curso →
-                                </a>
-                            </li>
-                            <li class="curso-item">
-                                <div class="curso-info">
-                                    <strong class="curso-name">Comunicação Não Violenta</strong>
-                                    <small class="curso-provider">Escola Virtual do Governo</small>
-                                </div>
-                                <a href="https://www.escolavirtual.gov.br/curso/463" class="curso-link" target="_blank" rel="noopener">
-                                    Acessar curso →
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Trilha 2: Office + Dados -->
-                    <div class="trilha-card" data-trilha="office-dados">
-                        <div class="trilha-header">
-                            <div class="trilha-icon">💻</div>
-                            <h3 class="trilha-title">Office + Dados</h3>
-                            <div class="trilha-meta">
-                                <span class="trilha-duration">6-8 semanas</span>
-                                <span class="trilha-focus">Ferramentas Digitais e Análise</span>
-                            </div>
-                        </div>
-                        <p class="trilha-description">
-                            Domine as principais ferramentas do Office e aprenda a trabalhar com dados.
-                        </p>
-                        <ul class="curso-list">
-                            <li class="curso-item">
-                                <div class="curso-info">
-                                    <strong class="curso-name">Excel Básico</strong>
-                                    <small class="curso-provider">Fundação Bradesco - Escola Virtual</small>
-                                </div>
-                                <a href="https://www.ev.org.br/cursos/microsoft-excel-2016-basico" class="curso-link" target="_blank" rel="noopener">
-                                    Acessar curso →
-                                </a>
-                            </li>
-                            <li class="curso-item">
-                                <div class="curso-info">
-                                    <strong class="curso-name">Excel na Prática</strong>
-                                    <small class="curso-provider">Fundação Bradesco - Escola Virtual</small>
-                                </div>
-                                <a href="https://www.ev.org.br/cursos/excel-na-pratica" class="curso-link" target="_blank" rel="noopener">
-                                    Acessar curso →
-                                </a>
-                            </li>
-                            <li class="curso-item">
-                                <div class="curso-info">
-                                    <strong class="curso-name">Tarefas Básicas no Excel</strong>
-                                    <small class="curso-provider">Microsoft Support</small>
-                                </div>
-                                <a href="https://support.microsoft.com/pt-br/excel" class="curso-link" target="_blank" rel="noopener">
-                                    Acessar curso →
-                                </a>
-                            </li>
-                            <li class="curso-item">
-                                <div class="curso-info">
-                                    <strong class="curso-name">Introdução ao Power BI</strong>
-                                    <small class="curso-provider">Microsoft Learn</small>
-                                </div>
-                                <a href="https://learn.microsoft.com/pt-br/training/modules/get-started-with-power-bi/" class="curso-link" target="_blank" rel="noopener">
-                                    Acessar curso →
-                                </a>
-                            </li>
-                            <li class="curso-item">
-                                <div class="curso-info">
-                                    <strong class="curso-name">Power BI no Serviço Público</strong>
-                                    <small class="curso-provider">Escola Virtual do Governo</small>
-                                </div>
-                                <a href="https://www.escolavirtual.gov.br/curso/1376" class="curso-link" target="_blank" rel="noopener">
-                                    Acessar curso →
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Trilha 3: Vida & Carreira -->
-                    <div class="trilha-card" data-trilha="vida-carreira">
-                        <div class="trilha-header">
-                            <div class="trilha-icon">🚀</div>
-                            <h3 class="trilha-title">Vida & Carreira</h3>
-                            <div class="trilha-meta">
-                                <span class="trilha-duration">Flexível</span>
-                                <span class="trilha-focus">Desenvolvimento Pessoal e Profissional</span>
-                            </div>
-                        </div>
-                        <p class="trilha-description">
-                            Desenvolva habilidades comportamentais e estratégias para construir sua carreira.
-                        </p>
-                        <ul class="curso-list">
-                            <li class="curso-item">
-                                <div class="curso-info">
-                                    <strong class="curso-name">Comunicação Assertiva no Trabalho</strong>
-                                    <small class="curso-provider">Na Prática - Fundação Estudar</small>
-                                </div>
-                                <a href="https://lp.napratica.org.br/comunicacao-assertiva-no-trabalho" class="curso-link" target="_blank" rel="noopener">
-                                    Acessar curso →
-                                </a>
-                            </li>
-                            <li class="curso-item">
-                                <div class="curso-info">
-                                    <strong class="curso-name">Fundamentos de Marketing Digital</strong>
-                                    <small class="curso-provider">Google Skillshop</small>
-                                </div>
-                                <a href="https://skillshop.exceedlms.com/student/collection/730709-digital-marketing" class="curso-link" target="_blank" rel="noopener">
-                                    Acessar curso →
-                                </a>
-                            </li>
-                            <li class="curso-item">
-                                <div class="curso-info">
-                                    <strong class="curso-name">1MiO - Trilhas de Empregabilidade</strong>
-                                    <small class="curso-provider">UNICEF</small>
-                                </div>
-                                <a href="https://www.1mio.com.br/" class="curso-link" target="_blank" rel="noopener">
-                                    Acessar plataforma →
-                                </a>
-                            </li>
-                            <li class="curso-item">
-                                <div class="curso-info">
-                                    <strong class="curso-name">PROPROFISSÃO</strong>
-                                    <small class="curso-provider">Instituto PROA</small>
-                                </div>
-                                <a href="https://www.proa.org.br/proprofissao" class="curso-link" target="_blank" rel="noopener">
-                                    Acessar programa →
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Plataformas Section -->
-        <section class="plataformas-section" id="plataformas">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Principais Plataformas</h2>
-                    <p class="section-subtitle">Conheça as instituições parceiras que oferecem os cursos gratuitos</p>
+                <div class="plataforma-card">
+                    <div class="plataforma-icon">🏛️</div>
+                    <h4 class="plataforma-name">Escola Virtual do Governo</h4>
+                    <p class="plataforma-description">Cursos do governo federal abertos ao público, com certificação.</p>
+                    <div class="plataforma-badge">Governo Federal</div>
                 </div>
                 
-                <div class="plataformas-grid">
-                    <div class="plataforma-card">
-                        <div class="plataforma-icon">🎓</div>
-                        <h4 class="plataforma-name">Fundação Bradesco</h4>
-                        <p class="plataforma-description">Escola Virtual com cursos gratuitos e certificados em diversas áreas.</p>
-                        <div class="plataforma-badge">Certificado Gratuito</div>
-                    </div>
-                    
-                    <div class="plataforma-card">
-                        <div class="plataforma-icon">🏛️</div>
-                        <h4 class="plataforma-name">Escola Virtual do Governo</h4>
-                        <p class="plataforma-description">Cursos do governo federal abertos ao público, com certificação.</p>
-                        <div class="plataforma-badge">Governo Federal</div>
-                    </div>
-                    
-                    <div class="plataforma-card">
-                        <div class="plataforma-icon">💼</div>
-                        <h4 class="plataforma-name">Microsoft Learn</h4>
-                        <p class="plataforma-description">Treinamentos oficiais da Microsoft para ferramentas do Office.</p>
-                        <div class="plataforma-badge">Oficial Microsoft</div>
-                    </div>
-                    
-                    <div class="plataforma-card">
-                        <div class="plataforma-icon">🔍</div>
-                        <h4 class="plataforma-name">Google Skillshop</h4>
-                        <p class="plataforma-description">Certificações gratuitas do Google em marketing digital e produtividade.</p>
-                        <div class="plataforma-badge">Certificação Google</div>
-                    </div>
-                    
-                    <div class="plataforma-card">
-                        <div class="plataforma-icon">🚀</div>
-                        <h4 class="plataforma-name">SEBRAE</h4>
-                        <p class="plataforma-description">Cursos online gratuitos focados em empreendedorismo e negócios.</p>
-                        <div class="plataforma-badge">Empreendedorismo</div>
-                    </div>
-                    
-                    <div class="plataforma-card">
-                        <div class="plataforma-icon">⚡</div>
-                        <h4 class="plataforma-name">Escola do Trabalhador 4.0</h4>
-                        <p class="plataforma-description">Programa do MTE com certificação Microsoft e acesso ao Office 365.</p>
-                        <div class="plataforma-badge">MTE + Microsoft</div>
-                    </div>
+                <div class="plataforma-card">
+                    <div class="plataforma-icon">💼</div>
+                    <h4 class="plataforma-name">Microsoft Learn</h4>
+                    <p class="plataforma-description">Treinamentos oficiais da Microsoft para ferramentas do Office.</p>
+                    <div class="plataforma-badge">Oficial Microsoft</div>
+                </div>
+                
+                <div class="plataforma-card">
+                    <div class="plataforma-icon">🔍</div>
+                    <h4 class="plataforma-name">Google Skillshop</h4>
+                    <p class="plataforma-description">Certificações gratuitas do Google em marketing digital e produtividade.</p>
+                    <div class="plataforma-badge">Certificação Google</div>
+                </div>
+                
+                <div class="plataforma-card">
+                    <div class="plataforma-icon">🚀</div>
+                    <h4 class="plataforma-name">SEBRAE</h4>
+                    <p class="plataforma-description">Cursos online gratuitos focados em empreendedorismo e negócios.</p>
+                    <div class="plataforma-badge">Empreendedorismo</div>
+                </div>
+                
+                <div class="plataforma-card">
+                    <div class="plataforma-icon">⚡</div>
+                    <h4 class="plataforma-name">Escola do Trabalhador 4.0</h4>
+                    <p class="plataforma-description">Programa do MTE com certificação Microsoft e acesso ao Office 365.</p>
+                    <div class="plataforma-badge">MTE + Microsoft</div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Sobre Section -->
-        <section class="sobre-section" id="sobre">
-            <div class="container">
-                <div class="sobre-content">
-                    <div class="sobre-text">
-                        <h2 class="section-title">Sobre o Programa</h2>
-                        <p class="sobre-description">
-                            O programa Jovem Aprendiz da GERAR oferece formações complementares gratuitas para preparar jovens para o mercado de trabalho. Estas formações são cuidadosamente selecionadas para complementar os conhecimentos adquiridos durante o programa, proporcionando uma base sólida para o desenvolvimento profissional.
-                        </p>
-                        <div class="sobre-features">
-                            <div class="feature-item">
-                                <div class="feature-icon">✅</div>
-                                <div class="feature-text">
-                                    <strong>100% Gratuito</strong>
-                                    <span>Todos os cursos são oferecidos sem custo</span>
-                                </div>
-                            </div>
-                            <div class="feature-item">
-                                <div class="feature-icon">🏆</div>
-                                <div class="feature-text">
-                                    <strong>Certificação</strong>
-                                    <span>Certificados reconhecidos no mercado</span>
-                                </div>
-                            </div>
-                            <div class="feature-item">
-                                <div class="feature-icon">📱</div>
-                                <div class="feature-text">
-                                    <strong>Flexível</strong>
-                                    <span>Estude no seu ritmo, quando quiser</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sobre-stats">
-                        <div class="stat-card">
-                            <span class="stat-number">15+</span>
-                            <span class="stat-label">Cursos Disponíveis</span>
-                        </div>
-                        <div class="stat-card">
-                            <span class="stat-number">9</span>
-                            <span class="stat-label">Plataformas Parceiras</span>
-                        </div>
-                        <div class="stat-card">
-                            <span class="stat-number">3</span>
-                            <span class="stat-label">Trilhas de Formação</span>
-                        </div>
-                    </div>
+    <!-- CTA Section -->
+    <section class="section cta-section" id="sobre">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Pronto para começar sua jornada?</h2>
+                <p class="cta-description">
+                    Escolha uma trilha que mais combina com seus objetivos e comece hoje mesmo a se preparar para o mercado de trabalho!
+                </p>
+                <div class="cta-actions">
+                    <a href="#trilhas" class="btn btn-primary">Explorar Trilhas</a>
+                    <a href="#plataformas" class="btn btn-secondary">Ver Plataformas</a>
                 </div>
             </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <div class="container">
-                <div class="cta-content">
-                    <h2 class="cta-title">Pronto para começar sua jornada?</h2>
-                    <p class="cta-description">
-                        Escolha uma trilha que mais combina com seus objetivos e comece hoje mesmo a se preparar para o mercado de trabalho!
-                    </p>
-                    <div class="cta-actions">
-                        <a href="#trilhas" class="btn btn-primary btn-large">Explorar Trilhas</a>
-                        <a href="#plataformas" class="btn btn-secondary btn-large">Ver Plataformas</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -431,8 +1045,53 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="js/main.js"></script>
+    <script>
+        // Smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Track course clicks
+        document.querySelectorAll('.curso-link').forEach(link => {
+            link.addEventListener('click', function() {
+                const courseName = this.closest('.curso-item').querySelector('.curso-name').textContent;
+                const provider = this.closest('.curso-item').querySelector('.curso-provider').textContent;
+                console.log('Curso acessado:', courseName, '-', provider);
+                
+                // Add visual feedback
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+
+        // Header scroll effect
+        let lastScrollY = window.scrollY;
+        const header = document.querySelector('.header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'var(--white)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
 
